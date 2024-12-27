@@ -50,32 +50,10 @@
     "zoom": 1,
     "geoserverWorkspace": "workspace1",
     "resolutions": [
-      156543.03,
-      78271.52,
-      39135.76,
-      19567.88,
-      9783.94,
-      4891.97,
-      2445.98,
-      1222.99,
-      611.5,
-      305.75,
-      152.87,
-      76.437,
-      38.219,
-      19.109,
-      9.5546,
-      4.7773,
-      2.3887,
-      1.1943,
-      0.5972,
-      0.299,
-      0.149
+      156543.03, 78271.52, 39135.76, 19567.88, 9783.94, 4891.97, 2445.98, 1222.99, 611.5, 305.75, 152.87, 76.437,
+      38.219, 19.109, 9.5546, 4.7773, 2.3887, 1.1943, 0.5972, 0.299, 0.149
     ],
-    "center": [
-      0,
-      0
-    ],
+    "center": [0, 0],
     "minResolution": 0.1,
     "maxResolution": 64000,
     "layers": [
@@ -162,22 +140,10 @@
     "groups": {
       "neckar": {
         "default": {
-          "layers": [
-            "osm_cuenca",
-            "aerial",
-            "mapaverde",
-            "estuario",
-            "cuenca_plata"
-          ],
-          "center": [
-            -59.412,
-            -33.091
-          ],
+          "layers": ["osm_cuenca", "aerial", "mapaverde", "estuario", "cuenca_plata"],
+          "center": [-59.412, -33.091],
           "resolution": 400,
-          "mobileCenter": [
-            9.207,
-            48.81
-          ],
+          "mobileCenter": [9.207, 48.81],
           "mobileResolution": 36,
           "minResolution": 0.1,
           "maxResolution": 64000,
@@ -205,9 +171,7 @@
     "flyToSlideshow": {
       "delayInSecondsForInitialStart": 9000000,
       "delayInSecondsBetweenFrames": 120000,
-      "maplinks": [
-        ""
-      ]
+      "maplinks": [""]
     },
     "defaultActiveGroup": "neckar",
     "groupTitles": {
