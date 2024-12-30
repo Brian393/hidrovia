@@ -1,21 +1,21 @@
 {
   "app": {
     "title": {
-      "en": "Nombre de la initiativa",
-      "de": "Nombre de la initiativa",
-      "es": "Nombre de la initiativa"
+      "en": "REMAR",
+      "pt": "REMAR",
+      "es": "REMAR"
     },
     "tagline": {
-      "en": "eslogan si se quiere",
-      "es": "eslogan si se quiere",
-      "de": "eslogan si se quiere"
+      "en": "A CONTRA-CORRIENTE",
+      "es": "A CONTRA-CORRIENTE",
+      "pt": "A CONTRA-CORRIENTE"
     },
     "projectWebsite": "",
     "defaultLanguage": "es",
     "color": {
-      "primary": "#000000",
+      "primary": "#1b225a",
       "secondary": "#7a17da",
-      "link": "#0000EE",
+      "link": "#19bfcf",
       "mapLink": "#29a15a"
     },
     "font": {
@@ -23,7 +23,7 @@
       "family": "Merriweather"
     },
     "legend": {
-      "isVisible": false
+      "isVisible": true
     },
     "controls": {
       "locate_me": true,
@@ -32,7 +32,7 @@
     },
     "sideBar": {
       "isVisible": true,
-      "backgroundColor": "#000000",
+      "backgroundColor": "#4552ae",
       "textColor": "#ffffff"
     },
     "navbar": {
@@ -74,7 +74,7 @@
         "type": "VECTOR",
         "name": "cuenca_plata",
         "url": "https://map.casariolab.art/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:cuenca_plata&outputFormat=application/json&srsname=EPSG:3857",
-        "group": "two",
+        "group": "remar",
         "queryable": false,
         "displayInLegend": false,
         "displaySidebarInfo": false,
@@ -95,7 +95,7 @@
       {
         "type": "XYZ",
         "name": "aerial",
-        "group": "two",
+        "group": "remar",
         "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
         "minResolution": 0.8,
         "maxResolution": 30,
@@ -140,7 +140,7 @@
         "type": "VECTOR",
         "name": "puertos",
         "url": "https://map.casariolab.art/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:puertos_fluviales&outputFormat=application/json&srsname=EPSG:3857",
-        "group": "valle",
+        "group": "remar",
         "queryable": true,
         "displayInLegend": true,
         "legendDisplayName": "Terminales",
@@ -158,16 +158,149 @@
           "strokeColor": "black",
           "strokeWidth": 1
         }
+      },
+      {
+        "type": "GROUP",
+        "name": "hidrovia",
+        "minResolution": 1,
+        "maxResolution": 68000,
+        "displayInLegend": true,
+        "legendDisplayName": "Hidrovía",
+        "legendIcon": "https://casario-mapa.s3.sa-east-1.amazonaws.com/assets/icons/legends/leyenda_hidrovia.png",
+        "visible": false,
+        "displaySidebarInfo": true,
+        "group": "remar",
+        "attributions": "Test attributions",
+        "layers": [
+          {
+            "type": "XYZ",
+            "name": "extractivista",
+            "group": "remar",
+            "url": "https://s3-sa-east-1.amazonaws.com/casario-mapa/assets/tiles/extractivista/{z}/{x}/{y}.png",
+            "minResolution": 40,
+            "maxResolution": 64000,
+            "displayInLegend": false,
+            "legendDisplayName": "",
+            "opacity": 0.99,
+            "queryable": false,
+            "visible": true
+          },
+          {
+            "type": "XYZ",
+            "name": "2020",
+            "group": "remar",
+            "url": "https://s3-sa-east-1.amazonaws.com/casario-mapa/assets/tiles/soja_2001-20/2020/{z}/{x}/{y}.png",
+            "minResolution": 1,
+            "maxResolution": 64000,
+            "displayInLegend": false,
+            "displaySidebarInfo": false,
+            "legendDisplayName": "Soja 2020",
+            "opacity": 0.99,
+            "visible": true
+          },
+          {
+            "type": "VECTOR",
+            "name": "hidrovia1",
+            "url": "https://map.casariolab.art/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:hidrovia1&outputFormat=application/json&srsname=EPSG:3857",
+            "queryable": false,
+            "isInteractive": false,
+            "displayInLegend": false,
+            "legendDisplayName": "Hidrovía1",
+            "format": "GeoJSON",
+            "visible": true,
+            "zIndex": 1000,
+            "minResolution": 1000,
+            "maxResolution": 64000,
+            "label": false,
+            "hoverable": false,
+            "style": {
+              "strokeColor": "#16C0DB",
+              "strokeWidth": 3
+            }
+          },
+          {
+            "type": "VECTOR",
+            "name": "hidrovia3_calados",
+            "url": "https://map.casariolab.art/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:hidrovia3_calados&outputFormat=application/json&srsname=EPSG:3857",
+            "group": "two",
+            "queryable": true,
+            "isInteractive": true,
+            "displayInLegend": false,
+            "legendDisplayName": "Hidrovía3",
+            "format": "GeoJSON",
+            "visible": true,
+            "zIndex": 1000,
+            "minResolution": 0.5,
+            "maxResolution": 1010,
+            "label": false,
+            "hoverable": true,
+            "style": {
+              "type": "line",
+              "strokeColor": "#16C0DB",
+              "strokeWidth": 3,
+              "hoverTextColor": "white",
+              "hoverBackgroundColor": "#000000"
+            }
+          },
+          {
+            "type": "VECTOR",
+            "name": "html_posts",
+            "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:html_posts&outputFormat=application/json&srsname=EPSG:3857",
+            "queryable": true,
+            "displayInLegend": true,
+            "legendDisplayName": {
+              "en": "Posts",
+              "es": "Posteos",
+              "pt": "Posteos"
+            },
+            "format": "GeoJSON",
+            "visible": true,
+            "zIndex": 1002,
+            "minResolution": 0.1,
+            "maxResolution": 64000,
+            "label": null,
+            "hoverable": true,
+            "canEdit": false,
+            "style": {
+              "styleRef": "htmlLayerStyle",
+              "hoverTextColor": "white",
+              "hoverBackgroundColor": "#000000"
+            }
+          },
+          {
+            "type": "VECTOR",
+            "name": "puertos",
+            "url": "https://map.casariolab.art/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:puertos_fluviales&outputFormat=application/json&srsname=EPSG:3857",
+            "group": "remar",
+            "queryable": true,
+            "displayInLegend": false,
+            "legendDisplayName": "Terminales",
+            "format": "GeoJSON",
+            "visible": true,
+            "zIndex": 10000,
+            "minResolution": 1,
+            "maxResolution": 64000,
+            "label": null,
+            "hoverable": true,
+            "style": {
+              "type": "circle",
+              "radius": 4,
+              "fillColor": "red",
+              "strokeColor": "black",
+              "strokeWidth": 1
+            }
+          }
+        ]
       }
     ],
     "groups": {
-      "neckar": {
+      "remar": {
         "default": {
-          "layers": ["osm_cuenca", "aerial", "mapaverde", "estuario", "cuenca_plata", "puertos"],
-          "center": [-59.412, -33.091],
-          "resolution": 400,
-          "mobileCenter": [9.207, 48.81],
-          "mobileResolution": 36,
+          "layers": ["osm_cuenca", "aerial", "mapaverde", "estuario", "cuenca_plata", "hidrovia", "html_posts"],
+          "center": [-59.003, -26.739],
+          "resolution": 2800,
+          "mobileCenter": [-59.003, -27.998],
+          "mobileResolution": 3000,
           "minResolution": 0.1,
           "maxResolution": 64000,
           "backgroundColor": "#A0794A"
@@ -196,12 +329,12 @@
       "delayInSecondsBetweenFrames": 120000,
       "maplinks": [""]
     },
-    "defaultActiveGroup": "neckar",
+    "defaultActiveGroup": "remar",
     "groupTitles": {
-      "neckar": {
-        "en": "Rio Paraná",
-        "es": "Rio Paraná",
-        "de": "Rio Paraná"
+      "remar": {
+        "en": "¡por la vida!",
+        "es": "¡por la vida!",
+        "pt": "¡por la vida!"
       }
     },
     "regionTitles": {
