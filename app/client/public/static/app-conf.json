@@ -6,9 +6,9 @@
       "es": "REMAR"
     },
     "tagline": {
-      "en": "A CONTRA-CORRIENTE",
-      "es": "A CONTRA-CORRIENTE",
-      "pt": "A CONTRA-CORRIENTE"
+      "en": "acción colectiva a contra-corrients",
+      "es": "acción colectiva a contra-corrients",
+      "pt": "acción colectiva a contra-corrients"
     },
     "projectWebsite": "",
     "defaultLanguage": "es",
@@ -127,6 +127,21 @@
       },
       {
         "type": "XYZ",
+        "name": "sitios",
+        "group": "one",
+        "url": "https://geo.timetochange.today/geoserver/gwc/service/tms/1.0.0/osm%3Aosm_places_bw_corredores@EPSG%3A900913@png/{z}/{x}/{-y}.png",
+        "minResolution": 0.5,
+        "maxResolution": 2000,
+        "zIndex": 15000,
+        "displayInLegend": false,
+        "legendIcon": "https://casario-mapa.s3.sa-east-1.amazonaws.com/assets/icons/legends/leyenda_red_urbana.png",
+        "legendDisplayName": "Red vial",
+        "opacity": 0.99,
+        "visible": true,
+        "updatewhileanimating": true
+      },
+      {
+        "type": "XYZ",
         "name": "mapaverde",
         "group": "backgroundLayers",
         "url": "https://s3-sa-east-1.amazonaws.com/casario-mapa/assets/tiles/mapaverde/{z}/{x}/{y}.png",
@@ -137,35 +152,12 @@
         "visible": true
       },
       {
-        "type": "VECTOR",
-        "name": "puertos",
-        "url": "https://map.casariolab.art/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:puertos_fluviales&outputFormat=application/json&srsname=EPSG:3857",
-        "group": "remar",
-        "queryable": true,
-        "displayInLegend": true,
-        "legendDisplayName": "Terminales",
-        "format": "GeoJSON",
-        "visible": true,
-        "zIndex": 10000,
-        "minResolution": 1,
-        "maxResolution": 64000,
-        "label": null,
-        "hoverable": true,
-        "style": {
-          "type": "circle",
-          "radius": 4,
-          "fillColor": "red",
-          "strokeColor": "black",
-          "strokeWidth": 1
-        }
-      },
-      {
         "type": "GROUP",
         "name": "hidrovia",
         "minResolution": 1,
         "maxResolution": 68000,
         "displayInLegend": true,
-        "legendDisplayName": "Hidrovía",
+        "legendDisplayName": "ruta extractiva",
         "legendIcon": "https://casario-mapa.s3.sa-east-1.amazonaws.com/assets/icons/legends/leyenda_hidrovia.png",
         "visible": false,
         "displaySidebarInfo": true,
@@ -174,10 +166,21 @@
         "layers": [
           {
             "type": "XYZ",
+            "name": "carto_dark",
+            "group": "backgroundLayers",
+            "url": "https://{a-d}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+            "minResolution": 0.25,
+            "maxResolution": 80,
+            "opacity": 1,
+            "queryable": false,
+            "visible": true
+          },
+          {
+            "type": "XYZ",
             "name": "extractivista",
             "group": "remar",
             "url": "https://s3-sa-east-1.amazonaws.com/casario-mapa/assets/tiles/extractivista/{z}/{x}/{y}.png",
-            "minResolution": 40,
+            "minResolution": 8,
             "maxResolution": 64000,
             "displayInLegend": false,
             "legendDisplayName": "",
@@ -201,7 +204,7 @@
           {
             "type": "VECTOR",
             "name": "hidrovia1",
-            "url": "https://map.casariolab.art/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:hidrovia1&outputFormat=application/json&srsname=EPSG:3857",
+            "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:hidrovia1&outputFormat=application/json&srsname=EPSG:3857",
             "queryable": false,
             "isInteractive": false,
             "displayInLegend": false,
@@ -221,7 +224,7 @@
           {
             "type": "VECTOR",
             "name": "hidrovia3_calados",
-            "url": "https://map.casariolab.art/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:hidrovia3_calados&outputFormat=application/json&srsname=EPSG:3857",
+            "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:hidrovia3_calados&outputFormat=application/json&srsname=EPSG:3857",
             "group": "two",
             "queryable": true,
             "isInteractive": true,
@@ -244,33 +247,8 @@
           },
           {
             "type": "VECTOR",
-            "name": "html_posts",
-            "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:html_posts&outputFormat=application/json&srsname=EPSG:3857",
-            "queryable": true,
-            "displayInLegend": true,
-            "legendDisplayName": {
-              "en": "Posts",
-              "es": "Posteos",
-              "pt": "Posteos"
-            },
-            "format": "GeoJSON",
-            "visible": true,
-            "zIndex": 1002,
-            "minResolution": 0.1,
-            "maxResolution": 64000,
-            "label": null,
-            "hoverable": true,
-            "canEdit": false,
-            "style": {
-              "styleRef": "htmlLayerStyle",
-              "hoverTextColor": "white",
-              "hoverBackgroundColor": "#000000"
-            }
-          },
-          {
-            "type": "VECTOR",
             "name": "puertos",
-            "url": "https://map.casariolab.art/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:puertos_fluviales&outputFormat=application/json&srsname=EPSG:3857",
+            "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:puertos_fluviales&outputFormat=application/json&srsname=EPSG:3857",
             "group": "remar",
             "queryable": true,
             "displayInLegend": false,
@@ -291,12 +269,37 @@
             }
           }
         ]
+      },
+      {
+        "type": "VECTOR",
+        "name": "html_posts",
+        "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:html_posts&outputFormat=application/json&srsname=EPSG:3857",
+        "queryable": true,
+        "displayInLegend": false,
+        "legendDisplayName": {
+          "en": "Posts",
+          "es": "Posteos",
+          "pt": "Posteos"
+        },
+        "format": "GeoJSON",
+        "visible": true,
+        "zIndex": 1002,
+        "minResolution": 0.1,
+        "maxResolution": 64000,
+        "label": null,
+        "hoverable": true,
+        "canEdit": true,
+        "style": {
+          "styleRef": "htmlLayerStyle",
+          "hoverTextColor": "white",
+          "hoverBackgroundColor": "#000000"
+        }
       }
     ],
     "groups": {
       "remar": {
         "default": {
-          "layers": ["osm_cuenca", "aerial", "mapaverde", "estuario", "cuenca_plata", "hidrovia", "html_posts"],
+          "layers": ["osm_cuenca", "aerial", "mapaverde", "estuario", "sitios", "cuenca_plata", "hidrovia", "html_posts"],
           "center": [-59.003, -26.739],
           "resolution": 2800,
           "mobileCenter": [-59.003, -27.998],
