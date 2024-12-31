@@ -299,7 +299,16 @@
     "groups": {
       "remar": {
         "default": {
-          "layers": ["osm_cuenca", "aerial", "mapaverde", "estuario", "sitios", "cuenca_plata", "hidrovia", "html_posts"],
+          "layers": [
+            "osm_cuenca",
+            "aerial",
+            "mapaverde",
+            "estuario",
+            "sitios",
+            "cuenca_plata",
+            "hidrovia",
+            "html_posts"
+          ],
           "center": [-59.003, -26.739],
           "resolution": 2800,
           "mobileCenter": [-59.003, -27.998],
