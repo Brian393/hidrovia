@@ -27,7 +27,7 @@ caches:
 sources:
   world_phys_clipped_trans_source:
     type: tile
-    url: https://map.casariolab.art/geoserver/gwc/service/tms/1.0.0/osm:world_phys_clipped_trans@EPSG:900913@png/%(z)s/%(x)s/%(y)s.png
+    url: https://map.casariolab.art/geoserver/gwc/service/tms/1.0.0/workspace1:world_phys_clipped_trans@EPSG:900913@png/%(z)s/%(x)s/%(y)s.png
     grid: world_phys_clipped_trans_grid_reverse
 
 grids:

@@ -61,7 +61,7 @@
         "type": "XYZ",
         "name": "osm_cuenca",
         "group": "backgroundLayers",
-        "url": "https://hidrovia.timetochange.today/geoserver/gwc/service/tms/1.0.0/workspace1%3Aworldphys_clipped_trans@EPSG%3A900913@png/{z}/{x}/{-y}.png",
+        "url": "https://mapproxy.hidrovia.timetochange.today/wmts/worldphys_clipped_trans/worldphys_clipped_trans_grid/{z}/{x}/{y}.png",
         "minResolution": 0.5,
         "maxResolution": 64000,
         "displayInLegend": false,
