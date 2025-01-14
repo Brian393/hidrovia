@@ -13,7 +13,7 @@
     "projectWebsite": "",
     "defaultLanguage": "es",
     "color": {
-      "primary": "#1b225a",
+      "primary": "#000000",
       "secondary": "#7a17da",
       "link": "#19bfcf",
       "mapLink": "#29a15a"
@@ -32,7 +32,7 @@
     },
     "sideBar": {
       "isVisible": true,
-      "backgroundColor": "#4552ae",
+      "backgroundColor": "#001861",
       "textColor": "#ffffff"
     },
     "navbar": {
@@ -61,7 +61,7 @@
         "type": "XYZ",
         "name": "osm_cuenca",
         "group": "backgroundLayers",
-        "url": "https://geo.timetochange.today/geoserver/gwc/service/tms/1.0.0/osm%3Aosm_cuenca@EPSG%3A900913@png/{z}/{x}/{-y}.png",
+        "url": "https://hidrovia.timetochange.today/geoserver/gwc/service/tms/1.0.0/workspace1%3Aworldphys_clipped_trans@EPSG%3A900913@png/{z}/{x}/{-y}.png",
         "minResolution": 0.5,
         "maxResolution": 64000,
         "displayInLegend": false,
@@ -315,7 +315,7 @@
           "mobileResolution": 3000,
           "minResolution": 0.1,
           "maxResolution": 64000,
-          "backgroundColor": "#A0794A"
+          "backgroundColor": "#72ACD4"
         },
         "local": {
           "layers": [],
