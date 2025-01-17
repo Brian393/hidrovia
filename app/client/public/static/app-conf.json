@@ -59,11 +59,24 @@
     "layers": [
       {
         "type": "XYZ",
-        "name": "osm_cuenca",
+        "name": "world_physical",
         "group": "backgroundLayers",
-        "url": "https://hidrovia.timetochange.today/geoserver/gwc/service/tms/1.0.0/workspace1%3Aworldphys_clipped_trans@EPSG%3A900913@png/{z}/{x}/{-y}.png",
-        "minResolution": 0.5,
+        "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}",
+        "minResolution": 400,
         "maxResolution": 64000,
+        "displayInLegend": false,
+        "legendDisplayName": "",
+        "opacity": 0.99,
+        "visible": true,
+        "updatewhileanimating": true
+      },
+      {
+        "type": "XYZ",
+        "name": "world_topo",
+        "group": "backgroundLayers",
+        "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
+        "minResolution": 16,
+        "maxResolution": 400,
         "displayInLegend": false,
         "legendDisplayName": "",
         "opacity": 0.99,
@@ -98,7 +111,7 @@
         "group": "remar",
         "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
         "minResolution": 0.8,
-        "maxResolution": 30,
+        "maxResolution": 16,
         "opacity": 1,
         "queryable": false,
         "visible": true
@@ -128,10 +141,10 @@
       {
         "type": "XYZ",
         "name": "sitios",
-        "group": "one",
-        "url": "https://geo.timetochange.today/geoserver/gwc/service/tms/1.0.0/osm%3Aosm_places_bw_corredores@EPSG%3A900913@png/{z}/{x}/{-y}.png",
+        "group": "remar",
+        "url": "https://api.mapbox.com/styles/v1/bkholmes/cknyrpfv51m8d18o580evho4m/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmtob2xtZXMiLCJhIjoiNjlkYjI4MDUyYTRlZWEyYzkwYTdmOTgxNmMzOGYwMTUifQ.VSUo52PYOUzS60NR6jqXTw",
         "minResolution": 0.5,
-        "maxResolution": 2000,
+        "maxResolution": 1600,
         "zIndex": 15000,
         "displayInLegend": false,
         "legendIcon": "https://casario-mapa.s3.sa-east-1.amazonaws.com/assets/icons/legends/leyenda_red_urbana.png",
@@ -267,6 +280,21 @@
               "strokeColor": "black",
               "strokeWidth": 1
             }
+          },
+          {
+            "type": "XYZ",
+            "name": "calles_blancas",
+            "group": "remar",
+            "url": "https://api.mapbox.com/styles/v1/bkholmes/cju4b2lq20n7h1fti2tcesvlz/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmtob2xtZXMiLCJhIjoiNjlkYjI4MDUyYTRlZWEyYzkwYTdmOTgxNmMzOGYwMTUifQ.VSUo52PYOUzS60NR6jqXTw",
+            "minResolution": 0.5,
+            "maxResolution": 1600,
+            "zIndex": 15000,
+            "displayInLegend": false,
+            "legendIcon": "https://casario-mapa.s3.sa-east-1.amazonaws.com/assets/icons/legends/leyenda_red_urbana.png",
+            "legendDisplayName": "Red vial",
+            "opacity": 0.99,
+            "visible": true,
+            "updatewhileanimating": true
           }
         ]
       },
@@ -300,7 +328,8 @@
       "remar": {
         "default": {
           "layers": [
-            "osm_cuenca",
+            "world_physical",
+            "world_topo",
             "aerial",
             "mapaverde",
             "estuario",
