@@ -6,9 +6,9 @@
       "es": "REMAR"
     },
     "tagline": {
-      "en": "acción colectiva a contra-corrients",
-      "es": "acción colectiva a contra-corrients",
-      "pt": "acción colectiva a contra-corrients"
+      "en": "CONTRACORRIENTE",
+      "es": "CONTRACORRIENTE",
+      "pt": "CONTRACORRIENTE"
     },
     "projectWebsite": "",
     "defaultLanguage": "es",
@@ -32,8 +32,8 @@
     },
     "sideBar": {
       "isVisible": true,
-      "backgroundColor": "#001861",
-      "textColor": "#ffffff"
+      "backgroundColor": "#F7F7F7",
+      "textColor": "#000000"
     },
     "navbar": {
       "dropdownMenu": false
@@ -50,8 +50,7 @@
     "zoom": 1,
     "geoserverWorkspace": "workspace1",
     "resolutions": [
-      156543.03, 78271.52, 39135.76, 19567.88, 9783.94, 4891.97, 2445.98, 1222.99, 611.5, 305.75, 152.87, 76.437,
-      38.219, 19.109, 9.5546, 4.7773, 2.3887, 1.1943, 0.5972, 0.299, 0.149
+      156543.03, 78271.52, 39135.76, 19567.88, 9783.94, 4891.97, 2445.98, 1222.99, 611.5, 305.75, 152.87, 76.437, 38.219, 19.109, 9.5546, 4.7773, 2.3887, 1.1943, 0.5972, 0.299, 0.149
     ],
     "center": [0, 0],
     "minResolution": 0.1,
@@ -373,9 +372,9 @@
     "defaultActiveGroup": "remar",
     "groupTitles": {
       "remar": {
-        "en": "¡por la vida!",
-        "es": "¡por la vida!",
-        "pt": "¡por la vida!"
+        "en": "¡por el agua y la vida!",
+        "es": "¡por el agua y la vida",
+        "pt": "¡¡por el agua y la vida!"
       }
     },
     "regionTitles": {
