@@ -40,13 +40,13 @@
     },
     "customNavigationScheme": "1",
     "spotlightMessage": {
-      "isVisible": false
+      "isVisible": true
     }
   },
   "map": {
     "projectionCode": "EPSG:3857",
     "minZoom": 1,
-    "maxZoom": 20,
+    "maxZoom": 21,
     "zoom": 1,
     "geoserverWorkspace": "workspace1",
     "resolutions": [
@@ -54,7 +54,7 @@
       38.219, 19.109, 9.5546, 4.7773, 2.3887, 1.1943, 0.5972, 0.299, 0.149
     ],
     "center": [0, 0],
-    "minResolution": 0.1,
+    "minResolution": 0.50,
     "maxResolution": 64000,
     "layers": [
       {
@@ -62,7 +62,7 @@
         "name": "world_physical",
         "group": "backgroundLayers",
         "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}",
-        "minResolution": 400,
+        "minResolution": 800,
         "maxResolution": 64000,
         "displayInLegend": false,
         "legendDisplayName": "",
@@ -75,8 +75,8 @@
         "name": "world_topo",
         "group": "backgroundLayers",
         "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
-        "minResolution": 16,
-        "maxResolution": 400,
+        "minResolution": 0.5,
+        "maxResolution": 800,
         "displayInLegend": false,
         "legendDisplayName": "",
         "opacity": 0.99,
@@ -106,12 +106,35 @@
         }
       },
       {
+        "type": "VECTOR",
+        "name": "organizaciones",
+        "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:organizaciones&outputFormat=application/json&srsname=EPSG:3857",
+        "group": "remar",
+        "queryable": false,
+        "displayInLegend": true,
+        "displaySidebarInfo": false,
+        "legendDisplayName": "Organizaciones",
+        "format": "GeoJSON",
+        "visible": true,
+        "zIndex": 10000,
+        "minResolution": 0.5,
+        "maxResolution": 12000,
+        "label": false,
+        "hoverable": false,
+        "style": {
+          "iconUrl": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/icons/blue.png",
+          "scale": 1,
+          "hoverTextColor": "white",
+          "hoverBackgroundColor": "#000000"
+        }
+      },
+      {
         "type": "XYZ",
-        "name": "aerial",
+        "name": "ESRI-World-Imagery2",
         "group": "remar",
         "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-        "minResolution": 0.8,
-        "maxResolution": 16,
+        "minResolution": 0.5,
+        "maxResolution": 4,
         "opacity": 1,
         "queryable": false,
         "visible": true
@@ -182,7 +205,7 @@
             "name": "carto_dark",
             "group": "backgroundLayers",
             "url": "https://{a-d}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-            "minResolution": 0.25,
+            "minResolution": 0.50,
             "maxResolution": 80,
             "opacity": 1,
             "queryable": false,
@@ -300,10 +323,98 @@
       },
       {
         "type": "VECTOR",
+        "name": "sitios_cuenca",
+        "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:sitios_cuenca&outputFormat=application/json&srsname=EPSG:3857",
+        "group": "valle",
+        "queryable": false,
+        "displayInLegend": false,
+        "isInteractive": false,
+        "legendDisplayName": "Sitios",
+        "format": "GeoJSON",
+        "visible": true,
+        "zIndex": 10000,
+        "minResolution": 16,
+        "maxResolution": 2600,
+        "label": true,
+        "hoverable": false,
+        "style": {
+          "label": {
+            "text": "NAME",
+            "fill": {
+              "color": "rgba( 0, 0, 0, 0.9 )"
+            },
+            "stroke": {
+              "color": "rgba( 255, 250, 240, 0.5 )",
+              "width": 1
+            },
+            "offsetX": -1,
+            "offsetY": 0,
+            "maxResolution": 2600,
+            "placement": "point",
+            "textAlign": "center",
+            "textWrap": "normal",
+            "fontType": "Georgia",
+            "fontSize": "15px",
+            "fontWeight": "normal",
+            "zIndex": 100000
+          },
+          "type": "circle",
+          "radius": 1,
+          "fillColor": "rgba( 255, 250, 240, 0 )",
+          "strokeWidth": 0.5,
+          "strokeColor": "rgba( 255, 250, 240, 0 )"
+        }
+      },
+      {
+        "type": "VECTOR",
+        "name": "sitios_amlat",
+        "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:sitios_amlat&outputFormat=application/json&srsname=EPSG:3857",
+        "group": "valle",
+        "queryable": false,
+        "displayInLegend": false,
+        "isInteractive": false,
+        "legendDisplayName": "Sitios",
+        "format": "GeoJSON",
+        "visible": true,
+        "zIndex": 10000,
+        "minResolution": 800,
+        "maxResolution": 2600,
+        "label": true,
+        "hoverable": false,
+        "style": {
+          "label": {
+            "text": "NAME",
+            "fill": {
+              "color": "rgba( 0, 0, 0, 0.9 )"
+            },
+            "stroke": {
+              "color": "rgba( 255, 250, 240, 0.5 )",
+              "width": 1
+            },
+            "offsetX": -1,
+            "offsetY": 0,
+            "maxResolution": 2600,
+            "placement": "point",
+            "textAlign": "center",
+            "textWrap": "normal",
+            "fontType": "Georgia",
+            "fontSize": "15px",
+            "fontWeight": "normal",
+            "zIndex": 100000
+          },
+          "type": "circle",
+          "radius": 1,
+          "fillColor": "rgba( 255, 250, 240, 0 )",
+          "strokeWidth": 0.5,
+          "strokeColor": "rgba( 255, 250, 240, 0 )"
+        }
+      },
+      {
+        "type": "VECTOR",
         "name": "html_posts",
         "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:html_posts&outputFormat=application/json&srsname=EPSG:3857",
         "queryable": true,
-        "displayInLegend": false,
+        "displayInLegend": true,
         "legendDisplayName": {
           "en": "Posts",
           "es": "Posteos",
@@ -311,9 +422,9 @@
         },
         "format": "GeoJSON",
         "visible": true,
-        "zIndex": 1002,
-        "minResolution": 0.1,
-        "maxResolution": 64000,
+        "zIndex": 10000,
+        "minResolution": 0.5,
+        "maxResolution": 1200,
         "label": null,
         "hoverable": true,
         "canEdit": true,
@@ -328,21 +439,21 @@
       "remar": {
         "default": {
           "layers": [
-            "world_physical",
             "world_topo",
-            "aerial",
+            "world_physical",
             "mapaverde",
+            "ESRI-World-Imagery2",
             "estuario",
-            "sitios",
-            "cuenca_plata",
-            "hidrovia",
-            "html_posts"
+            "sitios_cuenca",
+            "sitios_amlat",
+            "html_posts",
+            "organizaciones"
           ],
           "center": [-59.003, -26.739],
-          "resolution": 2800,
+          "resolution": 3400,
           "mobileCenter": [-59.003, -27.998],
-          "mobileResolution": 3000,
-          "minResolution": 0.1,
+          "mobileResolution": 3800,
+          "minResolution": 0.5,
           "maxResolution": 64000,
           "backgroundColor": "#72ACD4"
         },
