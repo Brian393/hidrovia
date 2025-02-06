@@ -19,7 +19,7 @@
       "mapLink": "#29a15a"
     },
     "font": {
-      "url": "https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap",
+      "url": "https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap",
       "family": "Merriweather"
     },
     "legend": {
@@ -122,7 +122,7 @@
         "label": false,
         "hoverable": true,
         "style": {
-          "iconUrl": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/icons/blue.png",
+          "iconUrl": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/icons/naranja.png",
           "scale": 1.2,
           "hoverTextColor": "white",
           "hoverBackgroundColor": "#000000"
@@ -145,8 +145,8 @@
         "label": false,
         "hoverable": true,
         "style": {
-          "iconUrl": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/icons/orange.png",
-          "scale": 1.2,
+          "iconUrl": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/icons/azul.png",
+          "scale": 0.7,
           "hoverTextColor": "white",
           "hoverBackgroundColor": "#000000"
         }
@@ -309,7 +309,7 @@
           "es": "Activaciones",
           "pt": "Activaciones locales"
         },
-        "legendIcon": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/icons/purple.png",
+        "legendIcon": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/icons/morado.png",
         "format": "GeoJSON",
         "visible": true,
         "zIndex": 10000,
@@ -336,8 +336,8 @@
             "estuario",
             "sitios_cuenca",
             "sitios_amlat",
-            "html_posts",
             "organizaciones",
+            "html_posts",
             "remada"
           ],
           "center": [-59.003, -26.739],
