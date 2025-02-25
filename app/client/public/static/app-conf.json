@@ -350,8 +350,8 @@
           ],
           "center": [-59.003, -26.739],
           "resolution": 3400,
-          "mobileCenter": [-59.003, -27.998],
-          "mobileResolution": 3800,
+          "mobileCenter": [-57.0, -26.0],
+          "mobileResolution": 8000,
           "minResolution": 0.5,
           "maxResolution": 64000,
           "backgroundColor": "#72ACD4"
