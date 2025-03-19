@@ -514,17 +514,17 @@ export function formatPopupRows(feature, excludedProperties) {
   const props = feature.getProperties();
   const {link1, link2, link3, source, ...rest} = props;
   if (UrlUtil.validURL(link1)) {
-    rest.WEBSITE = `<a href='${link1}' target='_blank'>here</a>`;
+    rest.WEBSITE = `<a href='${link1}' target='_blank'>aquí</a>`;
   }
   if (UrlUtil.validURL(link2)) {
-    let moreInformation = `<a href='${link2}' target='_blank'>here</a>`;
+    let moreInformation = `<a href='${link2}' target='_blank'>aquí</a>`;
     if (UrlUtil.validURL(link3)) {
-      moreInformation += ` and <a href='${link3}' target='_blank'>here</a>`;
+      moreInformation += ` and <a href='${link3}' target='_blank'>aquí</a>`;
     }
     rest['More information'] = moreInformation;
   }
   if (UrlUtil.validURL(source)) {
-    rest.SOURCE = `<a href='${source}' target='_blank'>here</a>`;
+    rest.SOURCE = `<a href='${source}' target='_blank'>aquí</a>`;
   }
 
   const transformed = [];
