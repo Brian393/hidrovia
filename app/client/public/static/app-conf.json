@@ -127,7 +127,7 @@
         "hoverable": true,
         "style": {
           "iconUrl": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/icons/naranja.png",
-          "scale": 1.2,
+          "scale": 0.9,
           "hoverTextColor": "white",
           "hoverBackgroundColor": "#000000"
         }
