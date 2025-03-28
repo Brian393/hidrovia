@@ -10,7 +10,7 @@
       "es": "por el agua y la vida",
       "pt": "pela água e pela vida"
     },
-    "projectWebsite": "",
+    "projectWebsite": "https://remarcontracorriente.org",
     "defaultLanguage": "es",
     "color": {
       "primary": "#000000",
@@ -127,7 +127,7 @@
         "hoverable": true,
         "style": {
           "iconUrl": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/icons/naranja.png",
-          "scale": 0.9,
+          "scale": 0.8,
           "hoverTextColor": "white",
           "hoverBackgroundColor": "#000000"
         }
@@ -140,7 +140,7 @@
         "queryable": true,
         "displayInLegend": false,
         "displaySidebarInfo": false,
-        "legendDisplayName": "",
+        "legendDisplayName": "videos",
         "format": "GeoJSON",
         "visible": true,
         "zIndex": 10000,
@@ -150,7 +150,7 @@
         "hoverable": false,
         "style": {
           "iconUrl": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/icons/remar32.png",
-          "scale": 1,
+          "scale": 0.9,
           "hoverTextColor": "white",
           "hoverBackgroundColor": "#000000"
         }
@@ -170,7 +170,7 @@
         },
         "format": "GeoJSON",
         "visible": true,
-        "zIndex": 10000,
+        "zIndex": 100,
         "minResolution": 0.5,
         "maxResolution": 12000,
         "label": false,
@@ -243,6 +243,50 @@
       },
       {
         "type": "VECTOR",
+        "name": "pueblos",
+        "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:pueblos&outputFormat=application/json&srsname=EPSG:3857",
+        "group": "valle",
+        "queryable": false,
+        "displayInLegend": false,
+        "isInteractive": false,
+        "legendDisplayName": "",
+        "format": "GeoJSON",
+        "visible": true,
+        "zIndex": 10000,
+        "minResolution": 16,
+        "maxResolution": 400,
+        "label": true,
+        "hoverable": false,
+        "style": {
+          "label": {
+            "text": "name",
+            "fill": {
+              "color": "rgba( 0, 0, 0, 0.9 )"
+            },
+            "stroke": {
+              "color": "rgba( 255, 250, 240, 0.4 )",
+              "width": 3
+            },
+            "offsetX": -1,
+            "offsetY": 0,
+            "maxResolution": 2600,
+            "placement": "point",
+            "textAlign": "center",
+            "textWrap": "normal",
+            "fontType": "Times",
+            "fontSize": "14px",
+            "fontWeight": "normal",
+            "zIndex": 100000
+          },
+          "type": "circle",
+          "radius": 1,
+          "fillColor": "rgba( 255, 250, 240, 0 )",
+          "strokeWidth": 0.5,
+          "strokeColor": "rgba( 255, 250, 240, 0 )"
+        }
+      },
+      {
+        "type": "VECTOR",
         "name": "sitios_cuenca",
         "url": "./geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typename=workspace1:sitios_cuenca&outputFormat=application/json&srsname=EPSG:3857",
         "group": "valle",
@@ -261,11 +305,11 @@
           "label": {
             "text": "NAME",
             "fill": {
-              "color": "rgba( 0, 0, 0, 0.9 )"
+              "color": "rgba( 0, 0, 0, 0.8 )"
             },
             "stroke": {
               "color": "rgba( 255, 250, 240, 0.5 )",
-              "width": 1
+              "width": 3
             },
             "offsetX": -1,
             "offsetY": 0,
@@ -273,9 +317,9 @@
             "placement": "point",
             "textAlign": "center",
             "textWrap": "normal",
-            "fontType": "Georgia",
+            "fontType": "Times",
             "fontSize": "15px",
-            "fontWeight": "normal",
+            "fontWeight": "bold",
             "zIndex": 100000
           },
           "type": "circle",
@@ -308,8 +352,8 @@
               "color": "rgba( 0, 0, 0, 0.9 )"
             },
             "stroke": {
-              "color": "rgba( 255, 250, 240, 0.5 )",
-              "width": 1
+              "color": "rgba( 255, 250, 240, 0.4 )",
+              "width": 3
             },
             "offsetX": -1,
             "offsetY": 0,
@@ -317,7 +361,7 @@
             "placement": "point",
             "textAlign": "center",
             "textWrap": "normal",
-            "fontType": "Georgia",
+            "fontType": "Roboto",
             "fontSize": "15px",
             "fontWeight": "normal",
             "zIndex": 100000
@@ -347,7 +391,7 @@
         "minResolution": 0.5,
         "maxResolution": 12000,
         "label": null,
-        "hoverable": true,
+        "hoverable": false,
         "canEdit": true,
         "style": {
           "styleRef": "htmlLayerStyle",
@@ -365,15 +409,16 @@
             "mapaverde",
             "ESRI-World-Imagery2",
             "estuario",
-            "sitios_cuenca",
-            "sitios_amlat",
             "organizaciones",
             "html_posts",
             "remada",
-            "videos"
+            "videos",
+            "pueblos",
+            "sitios_cuenca",
+            "sitios_amlat"
           ],
-          "center": [-59.003, -26.739],
-          "resolution": 3400,
+          "center": [-58.213,-30.628],
+          "resolution": 2500,
           "mobileCenter": [-57.0, -26.0],
           "mobileResolution": 8000,
           "minResolution": 0.5,
