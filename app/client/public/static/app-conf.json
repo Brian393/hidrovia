@@ -417,7 +417,7 @@
             "sitios_cuenca",
             "sitios_amlat"
           ],
-          "center": [-58.213,-30.628],
+          "center": [-58.213, -30.628],
           "resolution": 2500,
           "mobileCenter": [-57.0, -26.0],
           "mobileResolution": 8000,
