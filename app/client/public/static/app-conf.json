@@ -217,21 +217,6 @@
       },
       {
         "type": "XYZ",
-        "name": "sitios",
-        "group": "remar",
-        "url": "https://api.mapbox.com/styles/v1/bkholmes/cknyrpfv51m8d18o580evho4m/tiles/256/{z}/{x}/{y}?access_token=***REMOVED***",
-        "minResolution": 0.5,
-        "maxResolution": 1600,
-        "zIndex": 15000,
-        "displayInLegend": false,
-        "legendIcon": "https://casario-mapa.s3.sa-east-1.amazonaws.com/assets/icons/legends/leyenda_red_urbana.png",
-        "legendDisplayName": "Red vial",
-        "opacity": 0.99,
-        "visible": true,
-        "updatewhileanimating": true
-      },
-      {
-        "type": "XYZ",
         "name": "mapaverde",
         "group": "backgroundLayers",
         "url": "https://dquzniwb6n9ed.cloudfront.net/tiles/mapaverde/{z}/{x}/{y}.png",
