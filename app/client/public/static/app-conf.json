@@ -234,7 +234,7 @@
         "type": "XYZ",
         "name": "mapaverde",
         "group": "backgroundLayers",
-        "url": "https://hidrovia.s3.us-east-2.amazonaws.com/assets/tiles/mapa_verde/{z}/{x}/{y}.png",
+        "url": "https://dquzniwb6n9ed.cloudfront.net/tiles/mapaverde/{z}/{x}/{y}.png",
         "minResolution": 16,
         "maxResolution": 64000,
         "opacity": 0.99,
